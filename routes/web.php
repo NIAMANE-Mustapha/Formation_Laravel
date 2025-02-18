@@ -13,11 +13,8 @@ Route::get('/', function () {
 Route::get('/layout', function () {
     return view('layout');
 });
-Route::view('/about',[HomeController::class,'home']);
-Route::get('/welcome/{id}/{book?}', function ($id,$books) {
-    $posts=[
-        1=>['title'=>'laravel'],
-        2=>['title'=>'react']
-    ];
-    return view('welcome',['data'=>$posts[$id]]) ;
-});
+Route::get('/about',[HomeController::class,'home'])->name('about');
+
+
+Route::get('/blog/{id}/{book?}',[HomeController::class,'blog'])->name('blog');
+
