@@ -1,4 +1,4 @@
 @extends('Layout')
 @section('section1')
-about
+home
 @endsection
